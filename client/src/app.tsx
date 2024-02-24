@@ -1,8 +1,8 @@
-import OddsNamePage from 'OddsNamePage';
+import FootBallLivePage from 'pages/footbalLivePage';
 import React from 'react';
 
 const App = () => (
-  <OddsNamePage />
+  <FootBallLivePage />
 );
 
 export default App;

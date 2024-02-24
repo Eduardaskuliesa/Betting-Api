@@ -1,10 +1,6 @@
 import axios from 'axios';
 
 const serverApi = axios.create({
-  headers: {
-    'X-RapidAPI-Key': 'dad7f18104mshc5fe191143f15efp173eaajsnd8423c9d9c7c',
-    'X-RapidAPI-Host': 'sports-live-scores.p.rapidapi.com',
-  },
   baseURL: 'http://localhost:5024',
 });
 
