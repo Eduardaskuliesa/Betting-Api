@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import apiServices from 'services/api-services';
 import FootballLiveCard from './components/FooBallLiveCard';
 import classes from './index.module.scss';
+import FootballTableLive from './components/FootballTableLive';
 
 const FootBallLivePage
 : React.FC = () => {
@@ -11,7 +12,7 @@ const FootBallLivePage
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const data = await apiServices.fetchOddsName();
+        const data = await apiServices.fetchFootBallLiveMatches();
         console.log('Data from api', data);
         setMatches(data);
       } catch (err) {
@@ -25,16 +26,8 @@ const FootBallLivePage
   console.log('Matches', matches);
 
   return (
-    <div>
-      {matches.length > 0 && (
-        <div>
-          <h2>FootBall Live Matches</h2>
-          <div className={classes.box}>
-            {matches.map((match) => <FootballLiveCard key={match['Match ID']} {...match} />)}
-          </div>
-
-        </div>
-      )}
+    <div className={classes.box}>
+      <FootballTableLive matches={matches} />
     </div>
   );
 };

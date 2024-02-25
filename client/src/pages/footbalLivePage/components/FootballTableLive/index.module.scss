@@ -1,0 +1,62 @@
+//TABLE
+.matchTablesContainer {
+    width: 80%;
+    background-color: #0E0E0F;
+    border-radius: 10px;
+    margin-top: 50px;
+  }
+
+ .headerWrapper{
+    display: flex;
+    align-items: end;
+ }
+ .liveH2{
+    color: white;
+    padding: 30px;
+    flex-grow: 0;
+    align-self: center;
+    margin: 0 auto;
+}
+
+  .typography{
+    font-weight: 600;
+  }
+
+.icon{
+    font-size: 14px;
+    color:  white;
+    margin-right:5px;
+}
+.iconU{
+    font-size: 22px;
+    color: white;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+  }
+.col{
+    display: flex;
+    flex-direction: column;
+}  
+
+.noMatches{
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+//MOBILE RESPONSIVE
+
+@media screen and (max-width: 950px) {    
+     .headerWrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     }
+     .matchTablesContainer {
+        width: 100%;
+      }    
+}
+

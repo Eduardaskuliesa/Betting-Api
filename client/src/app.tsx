@@ -1,8 +1,11 @@
-import FootBallLivePage from 'pages/footbalLivePage';
+import router from 'pages/navigation/router';
 import React from 'react';
+import {
+  RouterProvider,
+} from 'react-router-dom';
 
 const App = () => (
-  <FootBallLivePage />
+  <RouterProvider router={router} />
 );
 
 export default App;
