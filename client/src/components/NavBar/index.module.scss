@@ -1,0 +1,132 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: $secondary;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-radius: 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.ul{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    text-decoration: none;
+    color: white;
+}
+.ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    text-align: center;
+}
+
+.ul li a{
+    display: flex;
+    color: white;
+    font-size: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.ul li a:hover{
+    background-color: #404041;
+    border-radius: 5px;
+}
+.link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+  
+  .link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    opacity: 0;
+    background-color: rgb(185, 7, 7);
+    transition: opacity 0.3s;
+  }
+  
+  .link.activeLink::after {
+    opacity: 1;
+  }
+
+.right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding-right: 20px;
+    gap: 30px;
+}
+.left {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 40px;
+    padding-left: 20px;
+}
+.left a {
+    color: white;
+}
+.left a:hover{
+    background-color: #404041;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: $mediumBr) {
+    .nav{
+        border-radius: 0px;
+        width: 100%;
+    }
+}
+
+.navToggle {
+    display: none;
+    /* Style your toggle button */
+  }
+  
+  @media (max-width: 768px) { /* Adjust based on your breakpoint */
+    .nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .right{
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 5px;
+        padding: 0px;
+        align-items: flex-start;
+    }
+    .left{
+        padding: 0px;
+    }    
+    .navToggle {
+      display: block;
+      background-color: $secondary;
+      border: none;
+      font-size: 40px;
+      color: white;
+      padding: 20px;
+    }
+  
+    .left, .ul {
+      display: none; /* Hide navigation links by default on smaller screens */
+    }
+  
+    .show {
+      display: block; /* Show navigation links when menu is toggled */
+    }
+  }
