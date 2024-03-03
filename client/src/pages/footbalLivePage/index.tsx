@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import apiServices from 'services/api-services';
+import NavBar from 'components/NavBar';
 import FootballLiveCard from './components/FooBallLiveCard';
 import classes from './index.module.scss';
 import FootballTableLive from './components/FootballTableLive';
@@ -26,6 +27,7 @@ const FootBallLivePage
   console.log('Matches', matches);
 
   return (
+
     <div className={classes.box}>
       <FootballTableLive matches={matches} />
     </div>

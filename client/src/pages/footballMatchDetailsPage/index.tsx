@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import apiServices from 'services/api-services';
 
 const FootBallMatchDetailsPage = () => {
-  const { matchId } = useParams<{ matchId: string }>(); // Extracting matchId from URL
+  const { matchId } = useParams<{ matchId: string }>();
   const [matchStats, setMatchStats] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
