@@ -14,7 +14,6 @@ const FootBallLivePage
     const fetchData = async () => {
       try {
         const data = await apiServices.fetchFootBallLiveMatches();
-        console.log('Data from api', data);
         setMatches(data);
       } catch (err) {
         setError('Error on the client side. :(');
@@ -23,8 +22,6 @@ const FootBallLivePage
 
     fetchData();
   }, []);
-
-  console.log('Matches', matches);
 
   return (
 

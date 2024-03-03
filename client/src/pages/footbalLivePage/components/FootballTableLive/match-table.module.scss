@@ -15,6 +15,7 @@
     border-top: 1px solid #29292a ;
     table-layout: fixed;
   }
+
   .matchTable th,
   .matchTable td {
      text-align: left;
@@ -39,8 +40,8 @@
     border: solid 1px #000;
     border-style: solid none;
     padding: 10px;
-    background-color: #29292a;
   }
+
 
 td:first-child {
     border-left-style: solid;
@@ -94,6 +95,14 @@ td:last-child {
   font-weight: 600;
   font-size: 16px;
 }
+.clickableRow{
+  cursor: pointer;
+  background-color: #29292a;
+}
+.clickableRow:hover{
+  background-color: #4f4f4f;
+}
+
 
 @media screen and (max-width: $mediumBr) {
   .matchTable th:first-child,

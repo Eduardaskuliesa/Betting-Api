@@ -10,7 +10,6 @@
     border-radius: 40px;
     position: sticky;
     top: 0;
-    z-index: 1000;
 }
 
 .ul{
@@ -86,29 +85,24 @@
     border-radius: 5px;
 }
 
+.navToggle {
+    display: none;
+    cursor: pointer;
+  }
+
 @media screen and (max-width: $mediumBr) {
     .nav{
         border-radius: 0px;
         width: 100%;
     }
-}
-
-.navToggle {
-    display: none;
-    /* Style your toggle button */
-  }
-  
-  @media (max-width: 768px) { /* Adjust based on your breakpoint */
     .nav{
         flex-direction: column;
-        align-items: flex-start;
     }
     .right{
         flex-direction: column;
         gap: 5px;
         margin-top: 5px;
         padding: 0px;
-        align-items: flex-start;
     }
     .left{
         padding: 0px;
@@ -119,14 +113,27 @@
       border: none;
       font-size: 40px;
       color: white;
-      padding: 20px;
+      padding: 0px;
     }
   
     .left, .ul {
-      display: none; /* Hide navigation links by default on smaller screens */
+      display: none;
     }
   
     .show {
-      display: block; /* Show navigation links when menu is toggled */
+      display: block;
     }
-  }
+}
+
+@media  screen and (max-width: $smallBr) {
+    .right{
+      align-items: flex-start;
+    }
+    .nav{
+        align-items: flex-start;
+        padding-left: 20px;
+    }
+    .navToggle{
+        padding-top: 20px;
+    }
+}
